@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link
+            href="https://cdn.jsdelivr.net/npm/daisyui@5"
+            rel="stylesheet"
+            type="text/css"
+        />
+        <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Anek+Bangla:wght@100..800&family=Tiro+Bangla:ital@0;1&display=swap"
+            rel="stylesheet"
+        />
+        <style>
+            .anek-bangla-font {
+                font-family: "Anek Bangla", sans-serif;
+            }
+            .tiro-bangla-font {
+                font-family: "Tiro Bangla", serif;
+            }
+        </style>
+        <title>নিউজপেপার ওয়ালা</title>
+    </head>
+    <body>
+        <section class="h-screen w-screen flex">
+            <!-- Left navigation -->
+            <nav
+                class="w-64 bg-base-200 p-4 flex flex-col gap-2 border-r border-base-300 overflow-y-auto"
+            >
+                <h2
+                    class="anek-bangla-font text-2xl text-center bg-[#ee4023] p-4 font-bold mb-4"
+                >
+                    নিউজপেপার <span class="text-white">ওয়ালা</span>
+                </h2>
+                <!-- bangla potrika -->
+                <div
+                    class="flex flex-col gap-2 items-start border p-2 border-gray-200 tiro-bangla-font"
+                >
+                    <h2 class="text-lg font-bold text-[#ee4023] border-b">
+                        বাংলা পত্রিকা
+                    </h2>
+                    <a
+                        href="#"
+                        class="tab tab-bordered tab-active text-start border-black"
+                        onclick="loadNews('https://www.prothomalo.com')"
+                        >প্রথম আলো</a
+                    >
+                    <a
+                        href="#"
+                        class="tab tab-bordered"
+                        onclick="loadNews('https://www.kalerkantho.com')"
+                        >কালের কণ্ঠ</a
+                    >
+                    <a
+                        href="#"
+                        class="tab tab-bordered"
+                        onclick="loadNews('https://www.banglaedition.com/')"
+                        >বাংলা এডিশন</a
+                    >
+                    <a
+                        href="#"
+                        class="tab tab-bordered"
+                        onclick="loadNews('https://www.jugantor.com')"
+                        >যুগান্তর</a
+                    >
+                    <a
+                        href="#"
+                        class="tab tab-bordered"
+                        onclick="loadNews('https://bangla.bdnews24.com/')"
+                        >বিডি নিউজ ২৪</a
+                    >
+                    <a
+                        href="#"
+                        class="tab tab-bordered"
+                        onclick="loadNews('https://www.samakal.com')"
+                        >সমকাল</a
+                    >
+                    <a
+                        href="#"
+                        class="tab tab-bordered"
+                        onclick="loadNews('https://mzamin.com')"
+                        >মানবজমিন</a
+                    >
+                    <a
+                        href="#"
+                        class="tab tab-bordered"
+                        onclick="loadNews('https://www.dailyamardesh.com/')"
+                        >আমারদেশ</a
+                    >
+                </div>
+                <!-- Bangla potrika end -->
+
+                <!-- English potrika -->
+                <div
+                    class="flex flex-col gap-2 items-start border p-2 border-gray-200 tiro-bangla-font"
+                >
+                    <h2 class="text-lg font-bold text-[#ee4023] border-b">
+                        ইংরেজি পত্রিকা
+                    </h2>
+                    <a
+                        href="#"
+                        class="tab tab-bordered tab-active text-start border-black"
+                        onclick="loadNews('https://en.prothomalo.com')"
+                        >প্রথম আলো ইংলিশ</a
+                    >
+                    <a
+                        href="#"
+                        class="tab tab-bordered"
+                        onclick="loadNews('https://en.dhakapost.com/')"
+                        >ঢাকা পোস্ট ইংলিশ</a
+                    >
+                    <a
+                        href="#"
+                        class="tab tab-bordered"
+                        onclick="loadNews('https://www.newagebd.net/')"
+                        >নিউ এজ ইংলিশ</a
+                    >
+                    <a
+                        href="#"
+                        class="tab tab-bordered"
+                        onclick="loadNews('https://www.bdnews24.com')"
+                        >বিডি নিউজ ২৪</a
+                    >
+                </div>
+                <!-- english potrika end -->
+
+                <!-- international potrika -->
+                <div
+                    class="flex flex-col gap-2 items-start border p-2 border-gray-200 tiro-bangla-font"
+                >
+                    <h2 class="text-lg font-bold text-[#ee4023] border-b">
+                        আন্তর্জাতিক পত্রিকা
+                    </h2>
+                    <a
+                        href="#"
+                        class="tab tab-bordered tab-active text-start border-black"
+                        onclick="loadNews('https://www.anandabazar.com/')"
+                        >আনন্দবাজার</a
+                    >
+                    <a
+                        href="#"
+                        class="tab tab-bordered tab-active text-start border-black"
+                        onclick="loadNews('https://www.chinadaily.com.cn/')"
+                        >চীন ডেইলি.কম</a
+                    >
+                    <a
+                        href="#"
+                        class="tab tab-bordered tab-active text-start border-black"
+                        onclick="loadNews('https://www.japantimes.co.jp/')"
+                        >জাপান টাইমস</a
+                    >
+                    <a
+                        href="#"
+                        class="tab tab-bordered tab-active text-start border-black"
+                        onclick="loadNews('https://www.dawn.com/')"
+                        >ডন</a
+                    >
+
+                    <a
+                        href="#"
+                        class="tab tab-bordered tab-active text-start border-black"
+                        onclick="loadNews('https://bhutantimes.bt/')"
+                        >ভুটান টাইমস</a
+                    >
+                </div>
+                <!-- international potrika end -->
+
+                <!-- journals -->
+                <div
+                    class="flex flex-col gap-2 items-start border p-2 border-gray-200 tiro-bangla-font"
+                >
+                    <h2 class="text-lg font-bold text-[#ee4023] border-b">
+                        জার্নালস
+                    </h2>
+                    <a
+                        href="#"
+                        class="tab tab-bordered tab-active text-start border-black"
+                        onclick="loadNews('https://www.plos.org/')"
+                        >প্লস</a
+                    >
+                    <a
+                        href="#"
+                        class="tab tab-bordered tab-active text-start border-black"
+                        onclick="loadNews('https://www.doaj.org/')"
+                        >ডিওএজ</a
+                    >
+                    <a
+                        href="#"
+                        class="tab tab-bordered tab-active text-start border-black"
+                        onclick="loadNews('https://www.frontiersin.org/')"
+                        >ফ্রন্টিয়ার্স</a
+                    >
+                </div>
+                <!-- Bangla potrika end -->
+
+                <!-- Alert -->
+                <div class="border p-2 border-gray-200 tiro-bangla-font">
+                    <p class="text-xs">
+                        <span class="text-[#ee4023]">সতর্কতাঃ</span> এই সাইটটি
+                        শুধুমাত্র শিক্ষামূলক উদ্দেশ্যে তৈরি করা হয়েছে।
+                    </p>
+                </div>
+                <!-- Alert end -->
+            </nav>
+            <!-- Main iframe area -->
+            <main class="flex-1 flex items-center justify-center bg-base-100">
+                <div class="w-full h-full p-4">
+                    <iframe
+                        id="newsFrame"
+                        src="https://www.prothomalo.com"
+                        frameborder="0"
+                        class="w-full h-full min-h-[80vh] rounded-lg shadow-lg"
+                    ></iframe>
+                </div>
+            </main>
+        </section>
+        <script>
+            function loadNews(url) {
+                document.getElementById("newsFrame").src = url;
+                // Remove active from all tabs
+                document
+                    .querySelectorAll("nav .tab")
+                    .forEach((tab) => tab.classList.remove("tab-active"));
+                // Add active to clicked tab
+                event.target.classList.add("tab-active");
+            }
+        </script>
+    </body>
+</html>
